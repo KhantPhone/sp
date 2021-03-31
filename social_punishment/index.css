@@ -1,0 +1,470 @@
+/* import CSS */
+@import url('css/left_panel.css');
+@import url('css/search_traitor.css');
+@import url('css/model.css');
+
+/* Theme */
+:root{
+  --primary: #A20E10;
+  --secondary: #D19241;
+  --v-gradient: linear-gradient(#A20E10, #D19241);
+  --h-gradient: linear-gradient(to right, #D19241, #A20E10);
+  --text-primary: white;
+  --text-secondary: #bbbbbb;
+  --btn-color: var(--secondary);
+}
+
+/* Reset */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*  */
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Define heading font */
+h1{
+  color: var(--primary);
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1em;
+}
+h2{
+  font-size: 1.9em;
+  text-align: center;
+}
+h3{
+  font-size: 1.7em;
+  color: var(--text-primary);
+  /* text-shadow: black 5px -3px 5px; */
+}
+h4{
+  font-size: 1.6em;
+}
+h5{
+  font-size: 1.4em;
+  margin: 10px;
+}
+h6{
+  font-size: 1em;
+  margin: 8px;
+}
+
+/* Container Layout */
+.grid-container{
+  display: grid;
+  gap: 0;
+  grid-template-columns: 1fr 3fr;
+}
+
+/* left panel CSS */
+#left-panel{
+  background: var(--h-gradient);
+  color: var(--text-secondary);
+  min-height: 100vh;
+  padding: 1em;
+  position: relative;
+  text-align: center;
+}
+
+#logo{
+  background: #fff url("assets/punishment.jpg") no-repeat center;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 1em auto;
+}
+
+form{
+  display: flex;
+  background-color: whitesmoke;
+  margin: 2em 0;
+  border-radius: 5px;
+  border: none;
+  /* box-shadow: black 5px -3px 8px; */
+}
+input[type=text]{
+  border: none;
+  border-radius: 3px 0 0 3px;
+  padding: 10px;
+  background-color: transparent;
+  width: 100%;
+  font-size: 1em;
+}
+input[type=text]:focus,
+input[type=text]:active,
+input[type=submit]:focus,
+input[type=submit]:active{
+  outline: none;
+}
+input[type=submit]{
+  border: none;
+  border-radius: 0 3px 3px 0;
+  padding: 0px 10px;
+  color: var(--text-primary);
+  font-weight: bold;
+  font-size: 1em;
+  background-color: var(--secondary);
+  cursor: pointer;
+}
+
+ul{
+  list-style: none;
+}
+.button{
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  color: var(--left-font-color);
+  padding: 10px 0;
+  border-radius: 3px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.button:hover,
+.button:focus{
+  color: white;
+}
+
+@media screen and (max-width: 768px){
+  /* change form layout in mobile view */
+  #left-panel{
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 0.5em;
+    min-height: 0;
+    justify-content: space-between;
+  }
+  form{
+    margin: 0 20px;
+  }
+  /* mobile view */
+  #logo{
+    background: #fff url("/assets/punishment.jpg") no-repeat center;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+  }
+  
+  #left-panel h3{
+    display: none;
+  }
+  ul{
+    display: none;
+  }
+}
+/* left panel CSS */
+#left-panel{
+  background: var(--h-gradient);
+  color: var(--text-secondary);
+  min-height: 100vh;
+  padding: 1em;
+  position: relative;
+  text-align: center;
+}
+
+#logo{
+  background: #fff url("assets/punishment.jpg") no-repeat center;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 1em auto;
+}
+
+form{
+  display: flex;
+  background-color: whitesmoke;
+  margin: 2em 0;
+  border-radius: 5px;
+  border: none;
+  /* box-shadow: black 5px -3px 8px; */
+}
+input[type=text]{
+  border: none;
+  border-radius: 3px 0 0 3px;
+  padding: 10px;
+  background-color: transparent;
+  width: 100%;
+  font-size: 1em;
+}
+input[type=text]:focus,
+input[type=text]:active,
+input[type=submit]:focus,
+input[type=submit]:active{
+  outline: none;
+}
+input[type=submit]{
+  border: none;
+  border-radius: 0 3px 3px 0;
+  padding: 0px 10px;
+  color: var(--text-primary);
+  font-weight: bold;
+  font-size: 1em;
+  background-color: var(--secondary);
+  cursor: pointer;
+}
+
+ul{
+  list-style: none;
+}
+.button{
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  color: var(--left-font-color);
+  padding: 10px 0;
+  border-radius: 3px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.button:hover,
+.button:focus{
+  color: white;
+}
+
+@media screen and (max-width: 768px){
+  /* change form layout in mobile view */
+  #left-panel{
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 0.5em;
+    min-height: 0;
+    justify-content: space-between;
+  }
+  form{
+    margin: 0 20px;
+  }
+  /* mobile view */
+  #logo{
+    background: #fff url("assets/punishment.jpg") no-repeat center;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+  }
+  
+  #left-panel h3{
+    display: none;
+  }
+  ul{
+    display: none;
+  }
+}
+
+/* Main Content Area */
+#content-area{
+  min-height: 100vh;
+  height: auto;
+  padding: 1em;
+  /* overflow-x: hidden; */
+}
+
+/* right container layout */
+.content-grid-container{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 180px));
+  justify-content: center;
+}
+
+/*  */
+.record-container{
+  display: block;
+  background: var(--h-gradient);
+  color: #e4e4e4;
+  border-radius: 3px;
+  box-shadow: grey 0 0 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.record-container:hover{
+  opacity: 0.7;
+}
+.info{
+  background-color: transparent;
+  text-align: center;
+}
+.info > img{
+  width: 100%;
+  height: 150px;
+  border-radius: 3px 3px 0 0;
+}
+.info > p{
+  padding: 8px 0;
+}
+.record-detail{
+  display: none;
+}
+
+/* Starting from laptop size */
+@media screen and (max-width: 1024px){
+  .content-grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 160px));
+    justify-content: center;
+  }
+}
+
+/* Starting from tablet size */
+@media screen and (max-width: 768px){
+  .grid-container{
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
+
+  /* diable min-height in mobile view */
+  #content-area{
+    min-height: 0;
+  }
+  
+}
+
+/* Extra small screen */
+@media screen and (max-width: 320px){
+  .content-grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 135px));
+    justify-content: center;
+  }
+
+  #logo h3{
+    display: none;
+  }
+}
+
+/* Modal CSS */
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 99999;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+#myModal {
+  display: none; 
+  position: fixed; /* Stay in place */
+  z-index: 1; 
+  padding-top: 2%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  margin: auto;
+  display: block;
+  /* width: 70%; */
+  height: auto;
+  max-width: 35%;
+  background: var(--h-gradient);
+  color: #e4e4e4;
+  border-radius: 5px;
+}
+
+.modal-info > img{
+  width: 100%;
+  height: 23em;
+  border-radius: 3px 3px 0 0;
+}
+
+.modal-detail{
+  padding: 10px;
+  line-height: 1.5em;
+}
+
+/* Add Animation */
+.modal-content{  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+@media screen and (max-width: 1024px){
+  .modal{
+    padding-top: 1%;
+  }
+  .modal-content {
+    max-width: 40%;
+  }
+  .modal-info > img{
+    width: 100%;
+    height: 20em;
+    border-radius: 3px 3px 0 0;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .modal{
+    padding-top: 2%;
+  }
+  .modal-content {
+    max-width: 50%;
+  }
+  .modal-info > img{
+    width: 100%;
+    height: 20em;
+    border-radius: 3px 3px 0 0;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .modal {
+    padding-top: 3%; /* Location of the box */
+  }
+  .modal-content {
+    max-width: 95%;
+  }
+  .modal-info > img{
+    width: 100%;
+    height: 20em;
+    border-radius: 3px 3px 0 0;
+  }
+  .detail p{
+    font-size: 14px;
+  }
+}

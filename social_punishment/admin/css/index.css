@@ -1,0 +1,25 @@
+.font-16{
+	font-size: 16px;
+}
+.font-18{
+	font-size: 18px;
+}
+.font-20{
+	font-size: 20px;
+}
+.font-bar{
+	font-family: 'Barlow', sans-serif;
+}
+.font-sar{
+	font-family: 'Sarabun', sans-serif;
+}
+.text-fav{
+	color: #A20E10;
+}
+form input[type='text']{
+ 	border: none;
+ 	border-bottom: 1px solid #000;
+}
+a:hover{
+	text-decoration: none!important;
+}
